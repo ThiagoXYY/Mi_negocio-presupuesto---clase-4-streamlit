@@ -57,7 +57,7 @@ for i in range(len(nombres)):
     st.write(f"{nombres[i]} ${precios_unitarios[i]}")
 st.write(f"Subtotal:")
 for i in range(len(nombres)):
-    st.write(f"{cantidades[i]} x {nombres[i]} ${precios_unitarios[i]}")
+    st.write(f"{cantidades[i]} x {nombres[i]} ${subtotal[i]}")
 st.metric(f"Descuento:",f"${descuento}")
 st.metric(f"IVA:",f"${iva}")
 st.metric(f"Subtotal con descuento:",f"${descontado}")
