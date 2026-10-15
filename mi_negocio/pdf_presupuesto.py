@@ -30,18 +30,18 @@ def armar_pdf(cliente,total,subtotal,descuento,iva,numero,fecha,cantidad,product
     pdf.set_font("Arial", "", 12)
     renglon(pdf, "Cliente", cliente)
     for i in range(len(cantidad)):
-        renglon_productos(pdf, f"{cantidad[i]} x {producto[i]}", f"${precio[i]:} c/u")
+        renglon_productos(pdf, f"{cantidad[i]} x {producto[i]}", f"${precio[i]:.2f} c/u")
     pdf.ln(4)
 
 
     pdf.cell(0, 9, "Subtotal:", new_x="LMARGIN", new_y="NEXT")
     for i in range(len(cantidad)):
-        renglon_productos(pdf, f"{producto[i]}", f"${subtotal[i]:}")
-    renglon(pdf, "Descuento", f"-${descuento:}")
-    renglon(pdf, "IVA 21%", f"${iva:}")
+        renglon_productos(pdf, f"{producto[i]}", f"${subtotal[i]:.2f}")
+    renglon(pdf, "Descuento", f"-${descuento:.2f}")
+    renglon(pdf, "IVA 21%", f"${iva:.2f}")
     pdf.set_font("Arial", "B", 14)
     pdf.set_text_color(5, 178, 220)
-    renglon(pdf, "TOTAL", f"${total:}")
+    renglon(pdf, "TOTAL", f"${total:.2f}")
     pdf.set_text_color(0,0,0)
 
     pdf.ln(10)
