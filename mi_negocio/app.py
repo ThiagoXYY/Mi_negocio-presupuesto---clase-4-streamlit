@@ -12,7 +12,7 @@ iva=0
 cantidad=0
 
 st.title(NOMBRE_NEGOCIO)
-st.write(f"Rubro: {RUBRO}")
+st.write(f"{RUBRO}")
 
 nombre= st.text_input("Ingrese su nombre")
 RENGLONES = st.number_input("Ingrese la cantidad de productos a presupuestar",min_value=1,max_value=3, step=1)
