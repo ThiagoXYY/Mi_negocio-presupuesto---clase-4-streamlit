@@ -11,6 +11,9 @@ total=0
 iva=0
 cantidad=0
 
+logo="logo.png"
+st.image(logo, width=150)
+
 st.title(NOMBRE_NEGOCIO)
 st.write(f"{RUBRO}")
 
