@@ -19,7 +19,7 @@ def renglon_productos(pdf, texto, valor):
 def armar_pdf(cliente,total,subtotal,descuento,iva,numero,fecha,cantidad,producto,precio):
     pdf = FPDF()
     pdf.add_page()
-    pdf.image(LOGO, x=10, y=10, w=40)
+    pdf.image(LOGO, x=10, y=10, w=60)
     pdf.set_font("Arial", "B", 20)
     pdf.cell(0, 12, NOMBRE_KIOSCO, align="R", new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Arial", "", 11)
