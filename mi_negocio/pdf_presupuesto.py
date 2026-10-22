@@ -1,7 +1,7 @@
 from fpdf import FPDF
 
 NOMBRE_KIOSCO = "Kiosco Carlos Paz"
-LOGO = "logo.png"
+LOGO = "logopdf.png"
  
 
 
