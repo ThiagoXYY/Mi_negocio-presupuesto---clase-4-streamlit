@@ -1,6 +1,6 @@
 import streamlit as st  
 from calculos import *
-from pdf_presupuesto import armar_pdf as pdf
+from pdf_presupuesto import *
 from mi_negocio import *
 
 nombres = []
@@ -53,7 +53,7 @@ else:
 if cantidad>0:
         iva= aplicar_iva(descontado,cambiar_iva)[0]
         total= aplicar_iva(descontado,cambiar_iva)[1]
-archivo = pdf(cliente=nombre, total=total,subtotal=subtotal,descuento=descuento,iva=iva,numero=numero,fecha=fecha,cantidad=cantidades,producto=nombres,precio=precios_unitarios)
+archivo = armar_pdf(cliente=limpiar(nombre), total=total,subtotal=subtotal,descuento=descuento,iva=iva,numero=numero,fecha=fecha,cantidad=cantidades,producto=[limpiar(p) for p in nombres],precio=precios_unitarios)
 
 st.write(f"Precios unitarios:")
 for i in range(len(nombres)):
