@@ -50,3 +50,6 @@ def armar_pdf(cliente,total,subtotal,descuento,iva,numero,fecha,cantidad,product
 
 
     return bytes(pdf.output())
+
+def limpiar(texto):
+    return texto.encode("latin-1", "ignore").decode("latin-1").strip()
